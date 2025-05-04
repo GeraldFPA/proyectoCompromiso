@@ -95,9 +95,7 @@ const router = createRouter({
   routes,
 });
 
-<<<<<<< HEAD
-export default router;
-=======
+
 
 export default router
->>>>>>> 9fd81671204111f8ab36cda7410e18157aed3a03
+
