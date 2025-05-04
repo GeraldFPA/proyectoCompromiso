@@ -1,7 +1,7 @@
 <template>
     <div class="dark">
       <h2 class="animate__animated animate__fadeInDown">🖤 Dark Fantasy Night</h2>
-      <img src="@/assets/imagen10.png" class="bg" />
+      <img src="/src/assets/imagen10.png" class="bg" />
       <p>Enter a world of shadows, lace, and mystery.</p>
     </div>
   </template>

@@ -1,6 +1,6 @@
 <template>
     <div class="fantasy-home">
-      <img src="@/assets/Imagen1.png" class="bg-image" />
+      <img src="/src/assets/Imagen1.png" class="bg-image" />
       <h1 class="title animate__animated animate__bounceIn">Welcome to StippFantasy 🌟</h1>
       <p class="subtitle">Where your fantasies meet reality</p>
       <router-link to="/galaxy" class="btn">Explore Strippers</router-link>

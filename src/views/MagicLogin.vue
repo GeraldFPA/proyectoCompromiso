@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-      <img src="@/assets/imagen8.png" class="side-img" />
+      <img src="/src/assets/imagen8.png" class="side-img" />
       <form class="form animate__animated animate__fadeInRight">
         <h3>Login to Fantasy</h3>
         <input type="email" placeholder="Email" />

@@ -1,7 +1,7 @@
 <template>
     <div class="private">
       <h2 class="animate__animated animate__pulse">🔒 Private Room</h2>
-      <img src="@/assets/imagen12.png" class="room" />
+      <img src="/src/assets/imagen12.png" class="room" />
       <p>Exclusive and intimate moments await you.</p>
     </div>
   </template>

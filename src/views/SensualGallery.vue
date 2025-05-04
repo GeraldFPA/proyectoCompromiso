@@ -1,7 +1,7 @@
 <template>
     <div class="gallery">
       <h2 class="animate__animated animate__zoomIn">🎨 Sensual Gallery</h2>
-      <img src="@/assets/imagen9.png" class="main-image" />
+      <img src="/src/assets/imagen9.png" class="main-image" />
       <p>Our strippers are more than dancers – they’re living art.</p>
     </div>
   </template>
