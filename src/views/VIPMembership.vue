@@ -1,7 +1,7 @@
 <template>
     <div class="vip">
       <h2 class="animate__animated animate__jackInTheBox">💎 VIP Membership</h2>
-      <img src="@/assets/imagen14.png" class="badge" />
+      <img src="/src/assets/imagen14.png" class="badge" />
       <p>Unlock fantasy perks, private shows, and exclusive access.</p>
       <button>Join Now</button>
     </div>

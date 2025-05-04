@@ -2,7 +2,7 @@
     <div class="galaxy">
       <h2 class="animate__animated animate__zoomIn">✨ Stripper Galaxy ✨</h2>
       <div class="stripper-list">
-        <img v-for="i in 6" :key="i" :src="`@/assets/imagen${i+1}.png`" class="card" />
+        <img v-for="i in 6" :key="i" :src="`src/assets/imagen${i+1}.png`" class="card" />
       </div>
     </div>
   </template>

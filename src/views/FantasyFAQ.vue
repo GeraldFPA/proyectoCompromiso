@@ -1,7 +1,7 @@
 <template>
     <div class="faq">
       <h2 class="animate__animated animate__flipInX">❓ Fantasy FAQ</h2>
-      <img src="@/assets/imagen13.png" class="decor" />
+      <img src="/src/assets/imagen13.png" class="decor" />
       <ul>
         <li><strong>How do I book?</strong> — Choose, click, confirm!</li>
         <li><strong>Is it safe?</strong> — 100% professionally managed.</li>
