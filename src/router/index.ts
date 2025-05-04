@@ -10,6 +10,12 @@ import HotEvents from "../views/HotEvents.vue";
 import NeonContact from "../views/NeonContact.vue";
 import EroticAbout from "../views/EroticAbout.vue";
 
+import SensualGallery from "../views/SensualGallery.vue";
+import DarkFantasy from "../views/DarkFantasy.vue";
+import PrivateRoom from "../views/PrivateRoom.vue";
+import FantasyFAQ from "../views/FantasyFAQ.vue";
+import VIPMembership from "../views/VIPMembership.vue";
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -55,9 +61,38 @@ const routes: Array<RouteRecordRaw> = [
     name: "EroticAbout",
     component: EroticAbout,
   },
+
+  // 🌟 Nuevas vistas añadidas
+  {
+    path: "/gallery",
+    name: "SensualGallery",
+    component: SensualGallery,
+  },
+  {
+    path: "/dark-fantasy",
+    name: "DarkFantasy",
+    component: DarkFantasy,
+  },
+  {
+    path: "/private-room",
+    name: "PrivateRoom",
+    component: PrivateRoom,
+  },
+  {
+    path: "/faq",
+    name: "FantasyFAQ",
+    component: FantasyFAQ,
+  },
+  {
+    path: "/vip",
+    name: "VIPMembership",
+    component: VIPMembership,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
+
+export default router;
