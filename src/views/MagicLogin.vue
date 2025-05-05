@@ -1,51 +1,73 @@
 <template>
-    <div class="login">
-      <img src="/src/assets/imagen8.png" class="side-img" />
-      <form class="form animate__animated animate__fadeInRight">
-        <h3>Login to Fantasy</h3>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  </template>
-  
-  <script setup></script>
-  
-  <style scoped>
-  @import 'animate.css';
-  
-  .login {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #12001f;
-    color: white;
-    padding: 3rem;
-  }
-  
-  .side-img {
-    width: 300px;
-    height: auto;
-    border-radius: 20px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  input {
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: none;
-  }
-  button {
-    background: #ff33cc;
-    color: white;
-    border: none;
-    padding: 0.7rem;
-    border-radius: 10px;
-  }
-  </style>
-  
+  <ion-page>
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-title>Login to Fantasy</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content :fullscreen="true" class="ion-padding">
+      <div class="login">
+        <img src="/src/assets/imagen8.png" class="side-img" />
+        <form class="form animate__animated animate__fadeInRight">
+          <h3>Login to Fantasy</h3>
+          <ion-input type="email" placeholder="Email" class="input-field" />
+          <ion-input type="password" placeholder="Password" class="input-field" />
+          <ion-button expand="full" type="submit">Login</ion-button>
+        </form>
+      </div>
+    </ion-content>
+  </ion-page>
+</template>
+
+<script setup>
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonInput,
+  IonButton
+} from '@ionic/vue';
+</script>
+
+<style scoped>
+@import 'animate.css';
+
+.login {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #12001f;
+  color: white;
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+.side-img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.input-field {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+ion-button {
+  background: #ff33cc;
+  color: white;
+  border-radius: 10px;
+}
+</style>
