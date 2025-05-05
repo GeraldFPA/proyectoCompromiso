@@ -2,14 +2,14 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>🌈 StippFantasy</ion-title>
+        <ion-title>🌟 StippFantasy</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="home">
-        <h1 class="animate__animated animate__rubberBand title">🌈 StippFantasy</h1>
-        <img :src="logo" alt="Logo de StippFantasy" class="logo animate__animated animate__fadeIn" />
+        <h1 class="animate__animated animate__fadeIn title">🌟 StippFantasy</h1>
+        <img :src="logo" alt="Logo de StippFantasy" class="logo animate__animated animate__pulse" />
 
         <div class="grid animate__animated animate__fadeInUp">
           <RouterLink
@@ -45,7 +45,7 @@ import logo from '/src/assets/Imagen1.png'
 const rutasMenu = [
   { label: '🎭 Inicio Fantasía', path: '/fantasy' },
   { label: '🪐 Galaxia Stripper', path: '/galaxy' },
-  { label: '🌈 Registrarse', path: '/register' },
+  { label: '✨ Registrarse', path: '/register' }, 
   { label: '🔥 Eventos Ardientes', path: '/events' },
   { label: '📞 Contacto', path: '/contact' },
   { label: '💋 Sobre Nosotros', path: '/about' },
@@ -69,6 +69,7 @@ const rutasMenu = [
   padding: 2rem 1rem;
   color: white;
   text-align: center;
+  animation: fadeIn 1s ease-in-out; /* Añadí una animación de entrada */
 }
 
 .title {
@@ -76,6 +77,7 @@ const rutasMenu = [
   margin-bottom: 1rem;
   font-weight: bold;
   text-shadow: 0 0 10px #fff;
+  animation: bounce 2s infinite; /* Hice que el título rebote */
 }
 
 .logo {
@@ -83,6 +85,7 @@ const rutasMenu = [
   margin-bottom: 2rem;
   border-radius: 20px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  animation: pulse 2s infinite; /* Cambié la animación a un pulso dinámico */
 }
 
 .grid {
@@ -106,6 +109,7 @@ const rutasMenu = [
   text-shadow: 0 0 5px #ff66ff;
   backdrop-filter: blur(4px);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: slideIn 1s ease-out; /* Animación de entrada de los botones */
 }
 
 .card:hover {
@@ -124,5 +128,27 @@ const rutasMenu = [
   color: #fff;
   background: #ff3366;
   box-shadow: 0 0 15px #ff3366;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 </style>
