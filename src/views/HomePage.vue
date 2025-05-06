@@ -2,29 +2,25 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>🌟 StippFantasy</ion-title>
+        <ion-title>🌟 StrippFantasy</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="home">
-        <h1 class="animate__animated animate__fadeIn title">🌟 StippFantasy</h1>
+        <h1 class="animate__animated animate__fadeIn title">🌟 StrippFantasy</h1>
         <img :src="logo" alt="Logo de StippFantasy" class="logo animate__animated animate__pulse" />
 
         <div class="grid animate__animated animate__fadeInUp">
-          <RouterLink v-for="ruta in rutasMenu" :key="ruta.path" :to="ruta.path" class="card">
+          <RouterLink
+            v-for="ruta in rutasMenu"
+            :key="ruta.path"
+            :to="ruta.path"
+            class="card"
+            :class="{ 'cerrar-sesion': ruta.path === '/login' }"
+          >
             {{ ruta.label }}
           </RouterLink>
-          <div class="last-two-container">
-            <RouterLink to="/vip" class="card">
-              💎 Membresía VIP
-            </RouterLink>
-            <RouterLink to="/login" class="card cerrar-sesion">
-              🚪 Cerrar sesión
-            </RouterLink>
-          </div>
-          <!-- Botón de cerrar sesión -->
-
         </div>
       </div>
     </ion-content>
@@ -47,10 +43,9 @@ const rutasMenu = [
   { label: '📞 Contacto', path: '/contact' },
   { label: '💋 Sobre Nosotros', path: '/about' },
   { label: '🎨 Galería Sensual', path: '/gallery' },
-  { label: '🌒 Fantasía Oscura', path: '/dark-fantasy' },
-  { label: '🚪 Habitación Privada', path: '/private-room' },
   { label: '❓ Preguntas Frecuentes', path: '/faq' },
-
+  { label: '💎 Membresía VIP', path: '/vip' },
+  { label: '🚪 Cerrar sesión', path: '/login' }
 ]
 </script>
 
@@ -67,7 +62,6 @@ const rutasMenu = [
   color: white;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
-  /* Añadí una animación de entrada */
 }
 
 .title {
@@ -76,26 +70,14 @@ const rutasMenu = [
   font-weight: bold;
   text-shadow: 0 0 10px #fff;
   animation: bounce 2s infinite;
-  /* Hice que el título rebote */
-}
-.last-two-container {
-  display: flex;
-  justify-content: center;
-  grid-column: 1 / -1;
-  gap: 1.2rem;
-  width: 100%;
 }
 
-.last-two-container .card {
-  width: 160px;
-}
 .logo {
   width: 150px;
   margin-bottom: 2rem;
   border-radius: 20px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
   animation: pulse 2s infinite;
-  /* Cambié la animación a un pulso dinámico */
 }
 
 .grid {
@@ -120,7 +102,6 @@ const rutasMenu = [
   backdrop-filter: blur(4px);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   animation: slideIn 1s ease-out;
-  /* Animación de entrada de los botones */
 }
 
 .card:hover {
@@ -143,53 +124,23 @@ const rutasMenu = [
 
 /* Animaciones personalizadas */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
 }
 
 @keyframes slideIn {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 </style>

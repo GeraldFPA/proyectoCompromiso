@@ -5,16 +5,19 @@
         <ion-buttons slot="start">
           <ion-back-button default-href="/home" />
         </ion-buttons>
-        <ion-title>🌟 Fantasy Home</ion-title>
+        <ion-title>🌟 Inicio de StrippFantasy</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="fantasy-home">
         <img src="/src/assets/Imagen1.png" class="bg-image" />
-        <h1 class="title animate__animated animate__bounceIn">Welcome to StippFantasy 🌟</h1>
-        <p class="subtitle">Where your fantasies meet reality</p>
-        <router-link to="/galaxy" class="btn">Explore Strippers</router-link>
+        <h1 class="title animate__animated animate__bounceIn">Bienvenido a StrippFantasy 🌟</h1>
+        <p class="subtitle">Donde tus fantasías se hacen realidad</p>
+        <p class="description">
+          En StrippFantasy, tenemos lo mejor de la diversión y el entretenimiento. Nuestros strippers son artistas talentosos que transforman cada evento en una experiencia única. Este mes, tenemos un catálogo increíble de strippers temáticos disponibles, cada uno con su estilo y personalidad única. ¡Haz tus fantasías realidad con solo un clic!
+        </p>
+        <router-link to="/galaxy" class="btn">Explorar Strippers</router-link>
       </div>
     </ion-content>
   </ion-page>
@@ -62,7 +65,14 @@ import {
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.description {
+  font-size: 1.25rem;
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;

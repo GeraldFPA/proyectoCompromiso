@@ -5,7 +5,7 @@
         <ion-buttons slot="start">
           <ion-back-button default-href="/home" />
         </ion-buttons>
-        <ion-title>🔥 Eventos de tendencia </ion-title>
+        <ion-title>🔥 Eventos de tendencia</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -20,18 +20,19 @@
         </ul>
       </div>
 
-      <!-- Modal para mostrar información del evento -->
-      <ion-modal :isOpen="showModal" @didDismiss="closeModal">
-        <ion-header>
-          <ion-toolbar color="danger">
-            <ion-title>{{ selectedEvent.name }}</ion-title>
-          </ion-toolbar>
-        </ion-header>
-
+      <!-- Modal personalizado sin fondo negro -->
+      <ion-modal
+        :isOpen="showModal"
+        @didDismiss="closeModal"
+        class="custom-modal"
+        :showBackdrop="false"
+        :backdropDismiss="true"
+      >
         <ion-content class="ion-padding modal-content">
           <div class="modal-header">
             <ion-icon name="sparkles" size="large" color="warning"></ion-icon>
           </div>
+          <h3>{{ selectedEvent.name }}</h3>
           <p>{{ selectedEvent.description }}</p>
           <p v-if="selectedEvent.discount" class="promo">{{ selectedEvent.discount }}</p>
           <ion-button expand="full" color="danger" @click="closeModal">Cerrar</ion-button>
@@ -57,54 +58,54 @@ import {
 import { ref } from 'vue';
 
 const events = [
-  { 
-    name: 'Exhibición Nocturna Glow', 
-    description: 'Una noche llena de luces brillantes y energía desbordante. ¡Prepárate para un espectáculo de luces y música como nunca antes!',
-    discount: 'Descuento del 20% en tu primera reserva!',
-    icon: 'flash'
+  {
+    name: 'Sensualidad Sobre Ruedas',
+    description: 'Llevamos la fiesta hasta la puerta de tu casa con nuestros strippers móviles. Una experiencia VIP donde tú eres el protagonista.',
+    discount: '10% de descuento si reservas para una despedida de soltero este mes.',
+    icon: 'car'
   },
-  { 
-    name: 'Fiesta Neón', 
-    description: 'La fiesta de neón más grande de la galaxia. Colores brillantes, música electrónica y un ambiente futurista te esperan.',
-    discount: '¡2x1 en bebidas para grupos!',
-    icon: 'color-palette'
+  {
+    name: 'Strippers Bajo las Estrellas',
+    description: '¿Tienes una terraza o jardín? Creamos una noche inolvidable al aire libre con strippers profesionales y música personalizada.',
+    discount: 'Reserva antes del viernes y obtén luces LED gratuitas para tu show.',
+    icon: 'moon'
   },
-  { 
-    name: 'Fiebre de la Jungla Fantástica', 
-    description: '¡Siente la adrenalina! Una fiesta salvaje en la jungla con un toque sensual y misterioso. Prepárate para bailar hasta el amanecer.',
-    discount: 'Promoción especial: 10% de descuento en tu próxima entrada.',
-    icon: 'paw'
+  {
+    name: 'Fantasy Room Experience',
+    description: 'Transformamos cualquier habitación de hotel o Airbnb en un espacio íntimo para una actuación sensual y exclusiva.',
+    discount: '¡20% en tu primera experiencia privada a domicilio!',
+    icon: 'bed'
   },
-  { 
-    name: 'Showdown de Fuego y Hielo', 
-    description: 'Una batalla épica entre fuego y hielo, donde la pasión y la energía se fusionan para ofrecer un espectáculo inolvidable.',
-    discount: '¡Consigue un 30% de descuento si llegas antes de las 10pm!',
+  {
+    name: 'Fuego en tu Fiesta',
+    description: 'Llevamos la chispa a tu cumpleaños, aniversario o celebración especial con un stripper sorpresa y efectos visuales.',
+    discount: 'Agrega un segundo artista por solo ₡10.000 extra.',
     icon: 'flame'
   },
-  { 
-    name: 'Bajo las Estrellas de la Seducción', 
-    description: 'Bajo un cielo estrellado, vive la noche más seductora, llena de magia, sensualidad y una atmósfera única.',
-    discount: '¡Entradas a mitad de precio si vienes en pareja!',
-    icon: 'star'
+  {
+    name: 'Noche de Lujuria Corporativa',
+    description: 'Sí, también vamos a oficinas. Sorprende a tu equipo con un show atrevido y profesional después del trabajo.',
+    discount: '15% de descuento en eventos para empresas de más de 10 personas.',
+    icon: 'briefcase'
   },
-  { 
-    name: 'Festival Lujuria y Luces', 
-    description: 'Un festival de luces y deseo, donde la música y las luces se combinan para crear un ambiente único de tentación.',
-    discount: '¡20% de descuento con tu primera compra en línea!',
-    icon: 'bulb'
-  },
+  {
+    name: 'Festival Seducción Total (evento especial)',
+    description: 'Un evento organizado por nosotros en una locación privada secreta. Música, luces, strippers y fantasía sin límites.',
+    discount: 'Entradas limitadas disponibles solo este mes.',
+    icon: 'people'
+  }
 ];
 
-const showModal = ref(false);  // Usar ref para control de estado en Vue 3
+const showModal = ref(false);
 const selectedEvent = ref({});
 
 const openModal = (index) => {
   selectedEvent.value = events[index];
-  showModal.value = true;  // Abrir el modal
+  showModal.value = true;
 };
 
 const closeModal = () => {
-  showModal.value = false;  // Cerrar el modal
+  showModal.value = false;
 };
 </script>
 
@@ -138,38 +139,62 @@ li:hover {
   background: #ff99cc;
 }
 
-/* Estilo para el modal */
+/* Modal personalizado sin fondo oscuro */
+ion-modal.custom-modal::part(backdrop) {
+  background: transparent !important;
+}
+
+/* Centramos completamente el contenido del modal */
 .modal-content {
-  width: 80%;
-  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 90%;
+  max-width: 300px;
   margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   text-align: center;
-  background: #fff5e6;  /* Color de fondo más suave */
+  background: #fff5f8;
   color: #333;
   border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Agregar sombra sutil */
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header {
   margin-bottom: 1rem;
 }
 
+.modal-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
 .modal-content p {
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .promo {
-  font-size: 1.2rem;
-  color: #e74c3c;
-  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #e91e63;
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 ion-button {
   margin-top: 1rem;
 }
 </style>
+
+
+
+
 
 

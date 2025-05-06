@@ -5,18 +5,18 @@
         <ion-buttons slot="start">
           <ion-back-button default-href="/home" />
         </ion-buttons>
-        <ion-title>Register</ion-title>
+        <ion-title>Registro</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="register">
-        <h2 class="animate__animated animate__rubberBand">🌈 Become a Fantasy Star</h2>
-        <form>
-          <ion-input placeholder="Name" class="input" />
-          <ion-input placeholder="Email" type="email" class="input" />
-          <ion-input placeholder="Password" type="password" class="input" />
-          <ion-button expand="block" class="register-btn">Register</ion-button>
+        <h2 class="animate__animated animate__rubberBand">🌟 Regístrate</h2>
+        <form @submit.prevent="handleRegister">
+          <ion-input placeholder="Nombre" class="input" />
+          <ion-input placeholder="Correo Electrónico" type="email" class="input" />
+          <ion-input placeholder="Contraseña" type="password" class="input" />
+          <ion-button expand="block" class="register-btn" type="submit">Registrar</ion-button>
         </form>
       </div>
     </ion-content>
@@ -35,6 +35,16 @@ import {
   IonButtons,
   IonBackButton
 } from '@ionic/vue';
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+// Función para manejar el registro
+const handleRegister = () => {
+  // Aquí puedes agregar validaciones o lógica adicional
+  router.push('/home');
+};
 </script>
 
 <style scoped>
@@ -45,6 +55,10 @@ import {
   color: white;
   padding: 2rem;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 form {
@@ -65,3 +79,4 @@ form {
   color: white;
 }
 </style>
+

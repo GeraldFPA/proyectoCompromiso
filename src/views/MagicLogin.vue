@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="dark">
-        <ion-title>Login to Fantasy</ion-title>
+        <ion-title>Iniciar sesión</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -10,7 +10,7 @@
       <div class="login">
         <img src="/src/assets/imagen8.png" class="side-img" />
         <form class="form animate__animated animate__fadeInRight">
-          <h3>Login to Fantasy</h3>
+          <h3>Iniciar sesión</h3>
           <ion-input type="email" placeholder="Email" class="input-field" />
           <ion-input type="password" placeholder="Password" class="input-field" />
           <ion-button expand="full" type="submit" @click="goToHome">Login</ion-button>
