@@ -17,13 +17,13 @@
             :key="ruta.path"
             :to="ruta.path"
             class="card"
-            replace
+            
           >
             {{ ruta.label }}
           </RouterLink>
 
           <!-- Botón de cerrar sesión -->
-          <RouterLink to="/login" class="card cerrar-sesion" replace>
+          <RouterLink to="/login" class="card cerrar-sesion" >
             🚪 Cerrar sesión
           </RouterLink>
         </div>
@@ -45,7 +45,7 @@ import logo from '/src/assets/logoS.png'
 const rutasMenu = [
   { label: '🎭 Inicio Fantasía', path: '/fantasy' },
   { label: '🪐 Galaxia Stripper', path: '/galaxy' },
-  { label: '✨ Registrarse', path: '/register' }, 
+ 
   { label: '🔥 Eventos de tendencia', path: '/events' },
   { label: '📞 Contacto', path: '/contact' },
   { label: '💋 Sobre Nosotros', path: '/about' },

@@ -2,9 +2,6 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="dark">
-        <ion-buttons slot="start">
-          <ion-back-button default-href="/home" />
-        </ion-buttons>
         <ion-title>Login to Fantasy</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -16,12 +13,18 @@
           <h3>Login to Fantasy</h3>
           <ion-input type="email" placeholder="Email" class="input-field" />
           <ion-input type="password" placeholder="Password" class="input-field" />
-          <ion-button expand="full" type="submit">Login</ion-button>
+          <ion-button expand="full" type="submit" @click="goToHome">Login</ion-button>
+
+          <!-- Botón de registrarse -->
+          <ion-button expand="full" color="light" @click="goToRegister">
+            Registrarse
+          </ion-button>
         </form>
       </div>
     </ion-content>
   </ion-page>
 </template>
+
 
 <script setup>
 import {
@@ -32,10 +35,20 @@ import {
   IonContent,
   IonInput,
   IonButton,
-  IonButtons,
-  IonBackButton
-} from '@ionic/vue';
+ 
+} from '@ionic/vue'
+
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+const goToRegister = () => {
+  router.push('/register')  // Ajusta la ruta si tu ruta de registro es distinta
+}
+const goToHome = () => {
+  router.push('/home')  // Ajusta la ruta si tu ruta de registro es distinta
+}
 </script>
+
 
 <style scoped>
 @import 'animate.css';
