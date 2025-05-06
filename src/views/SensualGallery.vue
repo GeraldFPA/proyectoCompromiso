@@ -2,6 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/home" />
+        </ion-buttons>
         <ion-title>Galería Sensual</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -27,7 +30,9 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
-  IonButton
+  IonButton,
+  IonButtons,
+  IonBackButton
 } from '@ionic/vue';
 import { useRouter } from 'vue-router';
 

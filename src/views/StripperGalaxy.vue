@@ -2,6 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/fantasy" />
+        </ion-buttons>
         <ion-title>🌌 Galaxia Stripper</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -47,7 +50,9 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonContent
+  IonContent,
+  IonButtons,
+  IonBackButton
 } from '@ionic/vue';
 
 import { ref } from 'vue';

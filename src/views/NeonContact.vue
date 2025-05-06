@@ -2,6 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/home" />
+        </ion-buttons>
         <ion-title>Contact Us</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -29,7 +32,9 @@ import {
   IonContent,
   IonInput,
   IonTextarea,
-  IonButton
+  IonButton,
+  IonButtons,
+  IonBackButton
 } from '@ionic/vue';
 </script>
 

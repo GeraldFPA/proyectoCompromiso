@@ -40,13 +40,13 @@ import {
   IonTitle,
   IonContent
 } from '@ionic/vue'
-import logo from '/src/assets/Imagen1.png'
+import logo from '/src/assets/logoS.png'
 
 const rutasMenu = [
   { label: '🎭 Inicio Fantasía', path: '/fantasy' },
   { label: '🪐 Galaxia Stripper', path: '/galaxy' },
   { label: '✨ Registrarse', path: '/register' }, 
-  { label: '🔥 Eventos Ardientes', path: '/events' },
+  { label: '🔥 Eventos de tendencia', path: '/events' },
   { label: '📞 Contacto', path: '/contact' },
   { label: '💋 Sobre Nosotros', path: '/about' },
   { label: '🎨 Galería Sensual', path: '/gallery' },

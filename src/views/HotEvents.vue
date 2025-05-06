@@ -2,13 +2,16 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="dark">
-        <ion-title>🔥 Eventos Calientes</ion-title>
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/home" />
+        </ion-buttons>
+        <ion-title>🔥 Eventos de tendencia </ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="events">
-        <h2 class="animate__animated animate__flash">🔥 Eventos Calientes 🔥</h2>
+        <h2 class="animate__animated animate__flash">🔥 Eventos de tendencia 🔥</h2>
         <ul>
           <li v-for="(event, index) in events" :key="index" @click="openModal(index)">
             <ion-icon :name="event.icon" slot="start" color="primary"></ion-icon>
@@ -47,7 +50,9 @@ import {
   IonContent,
   IonButton,
   IonModal,
-  IonIcon
+  IonIcon,
+  IonButtons,
+  IonBackButton
 } from '@ionic/vue';
 import { ref } from 'vue';
 

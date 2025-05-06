@@ -2,6 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/home" />
+        </ion-buttons>
         <ion-title>🖤 Dark Fantasy</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -11,6 +14,7 @@
         <h2 class="animate__animated animate__fadeInDown">🖤 Dark Fantasy Night</h2>
         <img src="/src/assets/imagen10.png" class="bg" />
         <p>Enter a world of shadows, lace, and mystery.</p>
+        
       </div>
     </ion-content>
   </ion-page>
@@ -22,8 +26,17 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonContent
+  IonContent,
+  IonButton,
+  IonButtons,
+  IonBackButton
 } from '@ionic/vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const goHome = () => {
+  router.push('/')
+}
 </script>
 
 <style scoped>
