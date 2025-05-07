@@ -12,7 +12,21 @@
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="gallery">
         <h2 class="animate__animated animate__zoomIn">🎨 Galería Sensual</h2>
+        
+        <!-- Imagen principal -->
         <img src="/src/assets/imagen9.png" class="main-image" />
+
+        <!-- Miniaturas debajo -->
+        <div class="thumbnails">
+          <img
+            v-for="n in [10, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]"
+            :key="n"
+            :src="`/src/assets/imagen${n}.png`"
+            class="thumbnail-image"
+            alt="Mini stripper"
+          />
+        </div>
+
         <p>
           Nuestras strippers son más que bailarinas, ¡son arte en movimiento!
         </p>
@@ -20,8 +34,10 @@
           En nuestra Galaxia Stripper, cada uno de nuestros artistas tiene una esencia única. Se entregan por completo en su trabajo, creando experiencias que te dejarán sin aliento. Con sus cuerpos y habilidades sensuales, cada uno de nuestros strippers transforma la noche en un espectáculo de seducción, arte y diversión. Ven y disfruta de un viaje visual, ¡donde el placer y el deseo se hacen realidad!
         </p>
 
-        <!-- Botón para redirigir a la ventana StripperGalaxy -->
-        <ion-button expand="full" color="primary" @click="goToStripperGalaxy">Explorar la Galaxia Stripper</ion-button>
+       <!-- Botón para redirigir a la Galaxia Stripper -->
+        <ion-button expand="full" color="primary" @click="goToStripperGalaxy">
+          Explorar la Galaxia Stripper
+        </ion-button>
       </div>
     </ion-content>
   </ion-page>
@@ -42,9 +58,8 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-// Función para redirigir a la ventana StripperGalaxy
 const goToStripperGalaxy = () => {
-  router.push('/galaxy'); // Asumiendo que la ruta '/galaxy' está configurada en tu router
+  router.push('/galaxy');
 };
 </script>
 
@@ -55,28 +70,50 @@ const goToStripperGalaxy = () => {
   background: linear-gradient(to right, #33001a, #ff0066);
   color: #fff0f5;
   text-align: center;
-  padding: 3rem; /* Aumentar el padding */
-  font-size: 1.5rem; /* Aumentar el tamaño de la fuente */
+  padding: 3rem;
+  font-size: 1.5rem;
 }
 
 .main-image {
-  width: 70%; /* Aumentar el tamaño de la imagen */
+  width: 70%;
   border-radius: 20px;
   margin: 2rem 0;
 }
 
+/* Miniaturas */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.thumbnail-image {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+.thumbnail-image:hover {
+  transform: scale(1.05);
+}
+
 h2 {
-  font-size: 3rem; /* Aumentar el tamaño del título */
+  font-size: 3rem;
 }
 
 p {
-  font-size: 1.25rem; /* Aumentar el tamaño del texto */
-  line-height: 1.6; /* Mejorar la legibilidad */
+  font-size: 1.25rem;
+  line-height: 1.6;
   margin: 1rem 0;
 }
 
 ion-button {
-  margin-top: 3rem; /* Aumentar el margen superior */
-  font-size: 1.25rem; /* Aumentar el tamaño del texto del botón */
+  margin-top: 3rem;
+  font-size: 1.25rem;
 }
 </style>
+
