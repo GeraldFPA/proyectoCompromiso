@@ -5,15 +5,15 @@
         <ion-buttons slot="start">
           <ion-back-button default-href="/fantasy" />
         </ion-buttons>
-        <ion-title>🌌 Galaxia Stripper</ion-title>
+        <ion-title>🌌 Galaxia de Bailarines/as</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="galaxy">
-        <h2 class="animate__animated animate__zoomIn">✨ ¡Bienvenido a la Galaxia Stripper! ✨</h2>
+        <h2 class="animate__animated animate__zoomIn">✨ ¡Bienvenido a la Galaxia de Bailarines/as! ✨</h2>
         <p class="intro-text">
-          Explora un universo lleno de talento y sensualidad. ¡Los mejores strippers de la galaxia están aquí para ti!
+          Explora un universo lleno de talento y sensualidad. ¡Las mejores Bailarinas y Bailarines de la galaxia están aquí para ti!
         </p>
 
         <div class="stripper-list">

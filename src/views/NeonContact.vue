@@ -16,7 +16,7 @@
         <form @submit.prevent="enviarReserva">
           <ion-input placeholder="Tu nombre" class="input-field" />
           <ion-input placeholder="Tu correo" type="email" class="input-field" />
-          <ion-input placeholder="Nombre del stripper" class="input-field" />
+          <ion-input placeholder="Nombre del bailarin o bailarina" class="input-field" />
           <ion-datetime
             presentation="date"
             placeholder="Selecciona una fecha"

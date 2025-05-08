@@ -13,11 +13,11 @@
       <div class="fantasy-home">
         <img src="/src/assets/Imagen1.png" class="bg-image" />
         <h1 class="title animate__animated animate__bounceIn">Bienvenido a StrippFantasy 🌟</h1>
-        <p class="subtitle">Donde tus fantasías se hacen realidad</p>
+        <p class="subtitle">Tu Fantasia a un solo click </p>
         <p class="description">
-          En StrippFantasy, tenemos lo mejor de la diversión y el entretenimiento. Nuestros strippers son artistas talentosos que transforman cada evento en una experiencia única. Este mes, tenemos un catálogo increíble de strippers temáticos disponibles, cada uno con su estilo y personalidad única. ¡Haz tus fantasías realidad con solo un clic!
+          En StrippFantasy, tenemos lo mejor de la diversión y el entretenimiento. Nuestros Bailarines/as son artistas talentosos que transforman cada evento en una experiencia única. Este mes, tenemos un catálogo increíble de Bailarines/as temáticos disponibles, cada uno con su estilo y personalidad única. ¡Haz tus fantasías realidad con solo un clic!
         </p>
-        <router-link to="/galaxy" class="btn">Explorar Strippers</router-link>
+        <router-link to="/galaxy" class="btn">Explorar Bailarines/as</router-link>
       </div>
     </ion-content>
   </ion-page>

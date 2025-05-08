@@ -28,10 +28,10 @@
         </div>
 
         <p>
-          Nuestras strippers son más que bailarinas, ¡son arte en movimiento!
+          Nuestras Bailarinas/es son más que bailarinas, ¡son arte en movimiento!
         </p>
         <p>
-          En nuestra Galaxia Stripper, cada uno de nuestros artistas tiene una esencia única. Se entregan por completo en su trabajo, creando experiencias que te dejarán sin aliento. Con sus cuerpos y habilidades sensuales, cada uno de nuestros strippers transforma la noche en un espectáculo de seducción, arte y diversión. Ven y disfruta de un viaje visual, ¡donde el placer y el deseo se hacen realidad!
+          En nuestra Galaxia Stripper, cada uno de nuestros artistas tiene una esencia única. Se entregan por completo en su trabajo, creando experiencias que te dejarán sin aliento. Con sus cuerpos y habilidades sensuales, cada uno de los y las Bailarines/as transforman la noche en un espectáculo de seducción, arte y diversión. Ven y disfruta de un viaje visual, ¡donde el placer y el deseo se hacen realidad!
         </p>
 
         <!-- Sección de paquetes -->
@@ -39,11 +39,11 @@
           <h3>💎 Paquetes Sensuales a Domicilio 💎</h3>
           <ul>
             <li>
-              ✨ <strong>Pack Básico:</strong> Show privado con 1 stripper, música personalizada y ambiente íntimo.
+              ✨ <strong>Pack Básico:</strong> Show privado con 1 Bailarin/a, música personalizada y ambiente íntimo.
               <span class="price">₡65,000</span>
             </li>
             <li>
-              💃 <strong>Pack Dúo Ardiente:</strong> 2 strippers sincronizados en un show de alto voltaje. ¡Ideal para despedidas!
+              💃 <strong>Pack Dúo Ardiente:</strong> Un show de alto voltaje. ¡Ideal para despedidas!
               <span class="price">₡120,000</span>
             </li>
             <li>
@@ -51,7 +51,7 @@
               <span class="price">₡160,000</span>
             </li>
             <li>
-              🔥 <strong>Pack Show VIP:</strong> Experiencia completa con 3 strippers, equipo de sonido, luces inteligentes, y regalo sorpresa.
+              🔥 <strong>Pack Show VIP:</strong> Experiencia exclusivas para los miembros VIP.
               <span class="price">₡220,000</span>
             </li>
             <li>
@@ -64,7 +64,7 @@
 
         <!-- Botón para redirigir a la Galaxia Stripper -->
         <ion-button expand="full" color="primary" @click="goToStripperGalaxy">
-          Explorar la Galaxia Stripper
+          Explorar la Galaxia Bailarines/as
         </ion-button>
       </div>
     </ion-content>

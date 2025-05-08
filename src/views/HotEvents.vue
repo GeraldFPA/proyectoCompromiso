@@ -60,13 +60,13 @@ import { ref } from 'vue';
 const events = [
   {
     name: 'Sensualidad Sobre Ruedas',
-    description: 'Llevamos la fiesta hasta la puerta de tu casa con nuestros strippers móviles. Una experiencia VIP donde tú eres el protagonista.',
+    description: 'Llevamos la fiesta hasta la puerta de tu casa con nuestros servicios. Una experiencia VIP donde tú eres el protagonista.',
     discount: '10% de descuento si reservas para una despedida de soltero este mes.',
     icon: 'car'
   },
   {
     name: 'Strippers Bajo las Estrellas',
-    description: '¿Tienes una terraza o jardín? Creamos una noche inolvidable al aire libre con strippers profesionales y música personalizada.',
+    description: '¿Tienes una terraza o jardín? Creamos una noche inolvidable al aire libre con Bailarines/as profesionales y música personalizada.',
     discount: 'Reserva antes del viernes y obtén luces LED gratuitas para tu show.',
     icon: 'moon'
   },
@@ -78,19 +78,19 @@ const events = [
   },
   {
     name: 'Fuego en tu Fiesta',
-    description: 'Llevamos la chispa a tu cumpleaños, aniversario o celebración especial con un stripper sorpresa y efectos visuales.',
+    description: 'Llevamos la chispa a tu cumpleaños o celebración especial con un servicio sorpresa y efectos visuales.',
     discount: 'Agrega un segundo artista por solo ₡10.000 extra.',
     icon: 'flame'
   },
   {
     name: 'Noche de Lujuria Corporativa',
-    description: 'Sí, también vamos a oficinas. Sorprende a tu equipo con un show atrevido y profesional después del trabajo.',
+    description: 'Sí, también vamos a oficinas. Sorprende a tu equipo con un show profesional, después del trabajo.',
     discount: '15% de descuento en eventos para empresas de más de 10 personas.',
     icon: 'briefcase'
   },
   {
     name: 'Festival Seducción Total (evento especial)',
-    description: 'Un evento organizado por nosotros en una locación privada secreta. Música, luces, strippers y fantasía sin límites.',
+    description: 'Un evento organizado por nosotros. Música, luces, Bailarines/as y fantasía sin límites.',
     discount: 'Entradas limitadas disponibles solo este mes.',
     icon: 'people'
   }
