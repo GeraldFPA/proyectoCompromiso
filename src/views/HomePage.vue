@@ -8,16 +8,23 @@
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="home">
+        <!-- Corazones flotantes -->
+        <div class="particles">
+          <span v-for="n in 4" :key="`left-${n}`" class="particle left" :style="{ top: `${n * 20}%` }">💖</span>
+          <span v-for="n in 4" :key="`right-${n}`" class="particle right" :style="{ top: `${n * 20}%` }">💖</span>
+        </div>
+
         <h1 class="animate__animated animate__fadeIn title">🌟 StrippFantasy</h1>
         <img :src="logo" alt="Logo de StippFantasy" class="logo animate__animated animate__pulse" />
 
         <div class="grid animate__animated animate__fadeInUp">
           <RouterLink
-            v-for="ruta in rutasMenu"
+            v-for="(ruta, index) in rutasMenu"
             :key="ruta.path"
             :to="ruta.path"
             class="card"
             :class="{ 'cerrar-sesion': ruta.path === '/login' }"
+            :style="{ animationDelay: `${index * 0.1}s` }"
           >
             {{ ruta.label }}
           </RouterLink>
@@ -61,7 +68,8 @@ const rutasMenu = [
   padding: 2rem 1rem;
   color: white;
   text-align: center;
-  animation: fadeIn 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .title {
@@ -69,7 +77,7 @@ const rutasMenu = [
   margin-bottom: 1rem;
   font-weight: bold;
   text-shadow: 0 0 10px #fff;
-  animation: bounce 2s infinite;
+  animation: bounce 2s infinite, glow 2s ease-in-out infinite alternate;
 }
 
 .logo {
@@ -87,6 +95,7 @@ const rutasMenu = [
   width: 100%;
   max-width: 800px;
   margin-top: 1rem;
+  z-index: 1;
 }
 
 .card {
@@ -101,13 +110,14 @@ const rutasMenu = [
   text-shadow: 0 0 5px #ff66ff;
   backdrop-filter: blur(4px);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  animation: slideIn 1s ease-out;
+  animation: slideIn 0.5s ease-out forwards;
+  animation-fill-mode: both;
 }
 
 .card:hover {
   background: white;
   color: #ff00cc;
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(-1deg);
   box-shadow: 0 0 15px #ff00cc;
 }
 
@@ -122,15 +132,44 @@ const rutasMenu = [
   box-shadow: 0 0 15px #ff3366;
 }
 
-/* Animaciones personalizadas */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+/* Corazones flotantes */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 8s linear infinite;
+  opacity: 0.7;
+}
+
+.particle.left {
+  left: 5%;
+}
+
+.particle.right {
+  right: 5%;
 }
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff33cc, 0 0 30px #ff33cc;
+  }
+  to {
+    text-shadow: 0 0 20px #ff66ff, 0 0 40px #ff66ff, 0 0 60px #ff66ff;
+  }
 }
 
 @keyframes pulse {
@@ -142,5 +181,10 @@ const rutasMenu = [
 @keyframes slideIn {
   0% { transform: translateY(50px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.7; }
+  100% { transform: translateY(-100vh); opacity: 0; }
 }
 </style>

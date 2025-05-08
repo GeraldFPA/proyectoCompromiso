@@ -80,7 +80,11 @@ const strippers = [
   { id: 14, imageIndex: 29, name: "Estela", description: "Brilla como una supernova, Estela es una figura icónica del erotismo sideral." },
   { id: 15, imageIndex: 30, name: "Ragnar", description: "Guerrero espacial del deseo, Ragnar impresiona con su físico y energía arrolladora." },
   { id: 16, imageIndex: 31, name: "Dante", description: "Con fuego en la mirada, Dante quema las pasarelas de la galaxia." },
-  { id: 17, imageIndex: 32, name: "Cassandra", description: "Belleza sobrenatural y movimientos envolventes. Cassandra es un sueño estelar." }
+  { id: 17, imageIndex: 32, name: "Cassandra", description: "Belleza sobrenatural y movimientos envolventes. Cassandra es un sueño estelar." },
+  { id: 18, imageIndex: 21, name: "PikaChulo", description: "Este hombre disfrazado de Pikachu electriza el escenario con su actuación juguetona y divertida." },
+  { id: 19, imageIndex: 10, name: "Wolverina", description: "Una fiera vestida de Wolverine. Su estilo salvaje y sensualidad rasgan corazones." },
+  { id: 20, imageIndex: 12, name: "El Electrico", description: "Un hombre lleno de carisma y ritmo. Su show es pequeño en tamaño, pero gigante en energía." },
+  { id: 21, imageIndex: 14, name: "La ley", description: "Irreverente, divertido y sorprendente." }
 ];
 
 const showPopup = ref(false);
@@ -212,6 +216,7 @@ const goToContact = () => {
   background-color: #cc0066;
 }
 </style>
+
 
 
 
