@@ -8,7 +8,6 @@
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div class="home">
-        <!-- Corazones flotantes -->
         <div class="particles">
           <span v-for="n in 4" :key="`left-${n}`" class="particle left" :style="{ top: `${n * 20}%` }">💖</span>
           <span v-for="n in 4" :key="`right-${n}`" class="particle right" :style="{ top: `${n * 20}%` }">💖</span>
@@ -132,7 +131,6 @@ const rutasMenu = [
   box-shadow: 0 0 15px #ff3366;
 }
 
-/* Corazones flotantes */
 .particles {
   position: absolute;
   top: 0;

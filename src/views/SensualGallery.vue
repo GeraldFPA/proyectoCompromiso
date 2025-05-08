@@ -13,10 +13,10 @@
       <div class="gallery">
         <h2 class="animate__animated animate__zoomIn">🎨 Galería Sensual</h2>
 
-        <!-- Imagen principal -->
+        
         <img src="/src/assets/imagen9.png" class="main-image" />
 
-        <!-- Miniaturas debajo -->
+        
         <div class="thumbnails">
           <img
             v-for="n in [10, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]"
@@ -34,7 +34,7 @@
           En nuestra Galaxia Stripper, cada uno de nuestros artistas tiene una esencia única. Se entregan por completo en su trabajo, creando experiencias que te dejarán sin aliento. Con sus cuerpos y habilidades sensuales, cada uno de los y las Bailarines/as transforman la noche en un espectáculo de seducción, arte y diversión. Ven y disfruta de un viaje visual, ¡donde el placer y el deseo se hacen realidad!
         </p>
 
-        <!-- Sección de paquetes -->
+        
         <div class="packages">
           <h3>💎 Paquetes Sensuales a Domicilio 💎</h3>
           <ul>
@@ -62,7 +62,7 @@
           <p class="note">🎁 Todos nuestros shows incluyen animación, juegos picantes y momentos inolvidables. ¡Llevamos la fiesta hasta tu sala!</p>
         </div>
 
-        <!-- Botón para redirigir a la Galaxia Stripper -->
+        
         <ion-button expand="full" color="primary" @click="goToStripperGalaxy">
           Explorar la Galaxia Bailarines/as
         </ion-button>
@@ -143,7 +143,7 @@ ion-button {
   font-size: 1.25rem;
 }
 
-/* Sección de paquetes */
+
 .packages {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;

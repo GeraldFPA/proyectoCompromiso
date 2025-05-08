@@ -62,7 +62,7 @@ const routes: Array<RouteRecordRaw> = [
     component: EroticAbout,
   },
 
-  // 🌟 Nuevas vistas añadidas
+  
   {
     path: "/gallery",
     name: "SensualGallery",

@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <!-- Popup -->
+      
       <div v-if="showPopup" class="popup-overlay" @click.self="closePopup">
         <div
           class="popup-card animate__animated animate__fadeInDown"

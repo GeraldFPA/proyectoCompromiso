@@ -68,23 +68,23 @@ import {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1.5rem; /* Aumentar tamaño de fuente global */
+  font-size: 1.5rem; 
 }
 
 .badge {
-  width: 250px; /* Aumentar tamaño de la imagen */
+  width: 250px; 
   margin: 2rem 0;
   display: block;
   margin-left: auto;
-  margin-right: auto; /* Centrar imagen */
+  margin-right: auto; 
 }
 
 h2 {
-  font-size: 2.5rem; /* Aumentar tamaño del título */
+  font-size: 2.5rem; 
 }
 
 h3 {
-  font-size: 2rem; /* Aumentar tamaño del subtítulo */
+  font-size: 2rem; 
   margin-top: 2rem;
 }
 
@@ -105,12 +105,12 @@ h3 {
 }
 
 .package h4 {
-  font-size: 1.75rem; /* Aumentar tamaño del nombre del paquete */
+  font-size: 1.75rem; 
   font-weight: bold;
 }
 
 .package p {
-  font-size: 1.25rem; /* Aumentar tamaño del texto */
+  font-size: 1.25rem; 
   margin: 0.75rem 0;
 }
 
@@ -119,7 +119,7 @@ ion-button {
   background: #ff3399;
   border-radius: 15px;
   color: white;
-  font-size: 1.25rem; /* Aumentar tamaño del botón */
+  font-size: 1.25rem; 
   margin-top: 2rem;
 }
 </style>

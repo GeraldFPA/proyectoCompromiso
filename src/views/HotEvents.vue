@@ -139,12 +139,10 @@ li:hover {
   background: #ff99cc;
 }
 
-/* Modal personalizado sin fondo oscuro */
 ion-modal.custom-modal::part(backdrop) {
   background: transparent !important;
 }
 
-/* Centramos completamente el contenido del modal */
 .modal-content {
   display: flex;
   flex-direction: column;

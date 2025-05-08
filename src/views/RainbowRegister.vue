@@ -40,9 +40,9 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-// Función para manejar el registro
+
 const handleRegister = () => {
-  // Aquí puedes agregar validaciones o lógica adicional
+ 
   router.push('/home');
 };
 </script>

@@ -15,7 +15,6 @@
           <ion-input type="password" placeholder="Password" class="input-field" />
           <ion-button expand="full" type="submit" @click="goToHome">Login</ion-button>
 
-          <!-- Botón de registrarse -->
           <ion-button expand="full" color="light" @click="goToRegister">
             Registrarse
           </ion-button>
@@ -42,10 +41,10 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const goToRegister = () => {
-  router.push('/register')  // Ajusta la ruta si tu ruta de registro es distinta
+  router.push('/register')  
 }
 const goToHome = () => {
-  router.push('/home')  // Ajusta la ruta si tu ruta de registro es distinta
+  router.push('/home')  
 }
 </script>
 
